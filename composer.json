@@ -1,0 +1,19 @@
+{
+    "name": "silvioiannone/fortnox",
+    "description": "Fortnox API client library",
+    "authors": [
+        {
+            "name": "Silvio Iannone",
+            "email": "silvioiannone91@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SI\\API\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "~6.0"
+    }
+}
