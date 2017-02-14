@@ -75,7 +75,7 @@ abstract class AbstractFortnox
         $this->settings = $settings;
 
         // If an authorization token is present in the settings...
-        if(isset($this->settings['authorizationToken']) && $this->settings['authorizationToken'])
+        if($this->settings['authorizationToken'] ?? false)
         {
             //...then fetch an authorization token
             $this->getAccessToken();
@@ -241,8 +241,8 @@ abstract class AbstractFortnox
     /**
      * Override this function to decide how the settings should be saved.
      *
-     * This is important because once the authorization is used in order to fetch an access token it
-     * cannot be used again and the access token (stored in the settings) must be saved.
+     * This is important because once the authorization token is used in order to fetch an access
+     * token it cannot be used again and the access token (stored in the settings) must be saved.
      *
      * @return void
      */
