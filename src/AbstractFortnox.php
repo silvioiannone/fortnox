@@ -75,7 +75,7 @@ abstract class AbstractFortnox
         $this->settings = $settings;
 
         // If an authorization token is present in the settings...
-        if(isset($this->settings['authorizationToken']))
+        if(isset($this->settings['authorizationToken']) && $this->settings['authorizationToken'])
         {
             //...then fetch an authorization token
             $this->getAccessToken();
